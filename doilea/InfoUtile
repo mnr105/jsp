@@ -1,0 +1,9 @@
+--- http://localhost:8080/doilea/Adunare => se numeste cale(url)absoluta, merge pt ce e in pages
+sau:
+--- /Adunare => cale(url) relativa la host root este bine de evitat pt ca in exemplul nostru avem nevoie de 
+url relativ la project root...nu merge pt AddForm din pages si nici pt AddForm2
+ sau:
+--- /doilea/Adunare => si asta se poate sa aiba niste defecte, merge cu AddForm2 si cu AddForm din pages.
+ sau:
+--- Adunare => url relativ la pagina curenta, !!! Atentie la fisier.html ca daca e intr-un folder iti cauta servletul 
+in acelasi folder, merge pt AddForm2 pt ca e in afara folderului
