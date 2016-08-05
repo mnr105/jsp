@@ -11,10 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/Adunare")
-public class rerte extends HttpServlet {
+public class Add extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public rerte() {
+	public Add() {
 		super();
 	}
 
