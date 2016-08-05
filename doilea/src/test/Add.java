@@ -54,6 +54,9 @@ public class Add extends HttpServlet {
 				+ "</p>");
 		out.println("</body></html>"); // ca sa mearga tre sa bagam
 		// in url: ?a=30&b=12
+		
+		out.println("<form action= /TestJsp/RequestServlet");
+		out.println("method=post> </br> <input type=submit name=UrmatorulExemplu? value=UrmatorulExemplu?></form>");
 
 	}
 

@@ -30,18 +30,19 @@ public class RequestCounterServ extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		ServletContext ServCont = getServletContext();
-		
+
 		// get the counter, getAttribut intoarce object=> tre sa ii facem cast
 		// in functie de necesitate
-		// Integer counter = (Integer)getServletContext().getAttribute("counter");
+		// Integer counter =
+		// (Integer)getServletContext().getAttribute("counter");
 		int counter = (int) ServCont.getAttribute("counter");
-		
+
 		// increment the counter
 		++counter;
-		
+
 		// save it back to the app scope
 		ServCont.setAttribute("counter", counter);
-		
+
 		// display the message "sa incrementat couter-ul"
 
 		PrintWriter out = response.getWriter();
@@ -50,6 +51,12 @@ public class RequestCounterServ extends HttpServlet {
 		out.println("<head><title>RequestCounter</title></head><body>");
 		out.println("<p>The counter is incremented</p>");
 		out.println("</body></html>");
+
+	}
+
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		doGet(request,response);
 	}
 
 }
