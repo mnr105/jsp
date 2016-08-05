@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/DisplayCounter")
+@WebServlet(urlPatterns = "/DisplayCounter")
 public class DisplayCounter extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -23,8 +23,9 @@ public class DisplayCounter extends HttpServlet {
 
 		ServletContext ServCont = getServletContext();
 
-		// get the counter,
-		int counter = (int) ServCont.getAttribute("counter");
+		// get the counter, daca folosim int o sa avem eroare 500 null pointer,
+		// daca folosim obj Integer ne apare valoarea null
+		Integer counter = (Integer) ServCont.getAttribute("counter");
 
 		// display the message "valoarea este"
 		PrintWriter out = response.getWriter();

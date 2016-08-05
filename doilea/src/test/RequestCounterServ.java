@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/RequestServlet")
+@WebServlet(urlPatterns= "/RequestServlet", loadOnStartup = 1)
 public class RequestCounterServ extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -44,7 +44,6 @@ public class RequestCounterServ extends HttpServlet {
 		ServCont.setAttribute("counter", counter);
 
 		// display the message "sa incrementat couter-ul"
-
 		PrintWriter out = response.getWriter();
 		out.println("Hello mushroom!");
 		out.println("<html>");
