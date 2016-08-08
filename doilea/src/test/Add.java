@@ -44,7 +44,7 @@ public class Add extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 
 		PrintWriter out = response.getWriter(); //
-		out.println("Hello mushroom");
+
 		int a = Integer.parseInt(request.getParameter("a"));
 		int b = Integer.parseInt(request.getParameter("b"));
 
@@ -52,14 +52,13 @@ public class Add extends HttpServlet {
 		out.println("<head><title>Servlet din doGet</title></head><body>");
 		out.println("<p> The sum of " + a + " and " + b + " is " + (a + b)
 				+ "</p>");
+		out.println("Hello mushroom");
+		out.println("<form action= /TestJsp/RequestServlet");
+		out.println("method=post> </br> <input type=submit name=UrmatorulExemplu? value=UrmatorulExemplu?></form>");
+
 		out.println("</body></html>"); // ca sa mearga tre sa bagam
 		// in url: ?a=30&b=12
 
-		/*
-		 * out.println("<form action= /TestJsp/RequestServlet"); out.println(
-		 * "method=post> </br> <input type=submit name=UrmatorulExemplu? value=UrmatorulExemplu?></form>"
-		 * );
-		 */
 	}
 
 	protected void doPost(HttpServletRequest request,

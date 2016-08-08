@@ -29,9 +29,10 @@ public class DisplayCounter extends HttpServlet {
 
 		// display the message "valoarea este"
 		PrintWriter out = response.getWriter();
-		out.println("Hello mushroom");
+
 		out.println("<html>");
 		out.println("<head><title>DisplayCounter</title></head><body>");
+		out.println("Hello mushroom");
 		out.println("<p>The counter value is curently:" + counter + "</p>");
 		out.println("</body></html>");
 
